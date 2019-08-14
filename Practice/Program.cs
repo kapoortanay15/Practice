@@ -6,8 +6,12 @@ using System.Windows.Forms;
 
 namespace Practice
 {
-    static class Program
+    public static class Program
     {
+        public static StartForm startForm;
+        public static MainForm mainForm;
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +20,11 @@ namespace Practice
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            startForm = new StartForm();
+            mainForm = new MainForm();
+
+            Application.Run(startForm);
         }
     }
 }
